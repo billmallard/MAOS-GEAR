@@ -89,6 +89,10 @@ Near-term milestones:
 4. Create initial load and kinematics study artifacts for baseline configuration.
 5. Define first bench/static verification matrix for gear behavior and fault conditions.
 
+## Knowledge Migration
+
+- Article-derived subsystem migration notes: `docs/ARTICLE_KNOWLEDGE_MIGRATION_2026Q2.md`
+
 ## Licensing
 
 This repository uses a dual-license model:
