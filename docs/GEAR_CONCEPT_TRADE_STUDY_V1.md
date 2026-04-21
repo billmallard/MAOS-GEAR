@@ -182,17 +182,54 @@ Worst cruise drag of the retractable concepts. Wheel sitting against the pod sid
 
 ---
 
+### Concept E: Cantilever Wing + Stub Gear Bracket at Wing Root (Synthesis Concept)
+
+**Description:**  
+The cantilever wing decision stands. A short stub bracket — sized only for gear loads, not wing bending — is attached to the pod side at the wing root structural junction. The gear pivots on this bracket and retracts upward along the pod side (same motion as Concept D), but the bracket is a simple weld fitting integrated into the wing root frame rather than a full span strut. No pod belly penetration. No additional strut drag span.
+
+**Mechanism:** Single-axis rotation about a fore-aft hinge on the stub bracket. One actuator per side.  
+**Stow position:** Leg lies approximately horizontal against lower pod side, wheel exposed — same as Concept D.  
+**Actuation:** Electric linear actuator. No separate door actuator required.
+
+**Drag:**  
+CD estimated 0.0015–0.0025 in retracted position — same as Concept C/D partial stow. The stub bracket itself has negligible frontal area (it is a short, faired fitting flush with the pod side at the wing root, not a span strut extending into the airstream). No measurable CD addition vs. the cantilever baseline.
+
+**Structural integration:**  
+Best of the retractable concepts. The wing root structural cluster is already the densest frame on the pod — wing attach fittings, pod shell doubler, and (if top-mounted) boom attach all converge here. Adding a gear pivot bracket at this junction co-locates load paths rather than creating new ones. Ground loads (vertical, fore-aft, lateral) transfer directly into the pod side frame through the same structural node that handles wing loads. No belly penetration, no wheel well, no pod pressure boundary issue.
+
+The stub bracket is a metalwork item: a weld assembly of tube and lugs, integrated into the wing root frame during pod construction. It does not require composite tooling or pod geometry changes.
+
+**Relationship to prior cantilever decision:**  
+The March 2026 cantilever vs. braced analysis correctly concluded that a full-span V-strut was not worth its drag, weight, and complexity. Concept E does not reopen that decision. The stub bracket carries only gear loads — it is not a structural member in the wing bending path and does not change the cantilever spar sizing. The drag penalty of the full strut (~0.0003 CD per prior analysis) is avoided entirely.
+
+**Energy absorption:**  
+Same geometry as Concept D — strut hangs from the pod side at a favorable angle for shock absorption. A conventional oleo or composite spring achieves full stroke. No near-horizontal geometry constraint.
+
+**Fail-safe behavior:**  
+Good — gravity-down with spring-assist. Same logic as Concept C/D.
+
+**Tread width:**  
+Stub bracket can be positioned to extend the gear pivot point slightly outboard of the pod side, increasing tread width compared to Concept D. The outboard offset is bounded by bracket weight and moment arm, but even 3–4 inches of outboard offset is achievable with minimal penalty. This partially addresses the tread width concern without requiring a full strut.
+
+**Phase 1 buildability:**  
+High. The stub bracket is simpler to fabricate than a full strut assembly and does not require rigging or tension adjustment. It is an extension of the wing root attach fitting work already required for the cantilever design.
+
+**Weaknesses:**  
+The stub bracket geometry must be defined early — it is part of the pod side frame and cannot easily be retrofitted after pod construction begins. Its position is constrained by the wing root attach fittings, which means gear pivot location is coupled to wing attach design. These must be resolved together.
+
+---
+
 ## 3. Comparison Matrix
 
-| Criterion | Weight | Concept A: Fixed Faired | Concept B: Full Retract | Concept C: Belly Pivot (Partial) | Concept D: Side Pivot (PBY) |
-|---|---|---|---|---|---|
-| Drag reduction in cruise | 25% | 1 — no reduction | 5 — full clean | 4 — ~60% reduction est. | 2 — ~20% reduction est. |
-| Mechanism complexity (fewer DOF = better) | 20% | 5 — none | 1 — well + doors + sequence | 4 — single pivot, no doors | 5 — single pivot, no doors |
-| Structural integration with pod | 20% | 4 — simple belly attach | 1 — well + pressure boundary | 3 — belly hard point, fairing | 5 — side hard point, no fairing |
-| Stroke adequacy for energy absorption | 15% | 5 — unconstrained | 3 — well depth constrains | 2 — near-horiz. geometry constrains | 4 — side angle is more favorable |
-| Fail-safe behavior | 10% | 5 — always deployed | 2 — multiple failure modes | 4 — gravity-down viable | 4 — gravity-down viable |
-| Phase 1 buildability | 10% | 5 — fully solved problem | 1 — high tooling and complexity | 4 — within EAB scope | 5 — within EAB scope |
-| **Weighted score** | | **3.65** | **2.10** | **3.35** | **3.95** |
+| Criterion | Weight | Concept A: Fixed Faired | Concept B: Full Retract | Concept C: Belly Pivot (Partial) | Concept D: Side Pivot (PBY) | Concept E: Stub Bracket + Side Pivot |
+|---|---|---|---|---|---|---|
+| Drag reduction in cruise | 25% | 1 — no reduction | 5 — full clean | 4 — ~60% reduction est. | 2 — ~20% reduction est. | 4 — ~60% reduction; stub adds no measurable CD |
+| Mechanism complexity (fewer DOF = better) | 20% | 5 — none | 1 — well + doors + sequence | 4 — single pivot, no doors | 5 — single pivot, no doors | 4 — single pivot + stub bracket fitting |
+| Structural integration with pod | 20% | 4 — simple belly attach | 1 — well + pressure boundary | 3 — belly hard point, fairing | 5 — side hard point, no fairing | 5 — wing root hard point, no belly penetration, co-located load paths |
+| Stroke adequacy for energy absorption | 15% | 5 — unconstrained | 3 — well depth constrains | 2 — near-horiz. geometry constrains | 4 — side angle is more favorable | 4 — same favorable geometry as D; slight outboard offset available |
+| Fail-safe behavior | 10% | 5 — always deployed | 2 — multiple failure modes | 4 — gravity-down viable | 4 — gravity-down viable | 4 — gravity-down viable |
+| Phase 1 buildability | 10% | 5 — fully solved problem | 1 — high tooling and complexity | 4 — within EAB scope | 5 — within EAB scope | 4 — stub bracket is simple metalwork; must be designed early |
+| **Weighted score** | | **3.65** | **2.10** | **3.35** | **3.95** | **4.00** |
 
 *Scores 1–5 per criterion; weighted score = sum(weight × score).*
 
@@ -200,23 +237,25 @@ Worst cruise drag of the retractable concepts. Wheel sitting against the pod sid
 
 ## 4. Recommendation
 
-### Phase 1: Concept D (Side Pivot) or Concept A, resolved by tread width analysis
+### Phase 1: Concept E (Stub Bracket + Side Pivot) preferred; Concept A fallback
 
-The matrix favors Concept D (3.95) for Phase 1 on simplicity and integration grounds. However, **the tread width question must be answered first.** If the pod side pivot geometry produces a tread width that is inadequate for the MAOS CG height and crosswind envelope (see Section 5), Concept D is eliminated and Concept A (fixed faired) becomes the Phase 1 baseline — it scores 3.65 and has zero mechanism risk.
+Concept E (4.00) is the preferred Phase 1 concept. It captures the structural hard-point benefit of Concept D without the full strut drag penalty, achieves the same ~60% gear drag reduction as Concept C, and keeps the pod belly free of penetrations and competing structure. Critically, it does not reopen the cantilever wing decision — the stub bracket is a gear fitting at the wing root frame, not a structural wing brace.
+
+**The gate remains tread width.** The stub bracket can be positioned to extend the pivot point slightly outboard of the pod shell, giving modestly more tread than a pure pod-side attach. But the calculation must confirm adequacy before the concept is locked.
 
 The ordering of decisions is:
 
-1. **Resolve tread width** — calculate the tread achievable with a side-pivot at the pod side hard point. Check static tip-over angle and crosswind stability for MTOW = 2,600 lb at the estimated CG height. If tread is adequate: Concept D. If not: Concept A.
+1. **Resolve tread width** — calculate achievable tread with stub bracket at the wing root hard point, including any outboard offset. Check static tip-over and crosswind stability at MTOW = 2,600 lb. If adequate: Concept E. If not: Concept A.
 
-2. **If Concept D is selected:** Define the pivot hard point and co-locate with wing root structure. Confirm that gear loads can be transferred into the existing pod side frame without a separate gear beam.
+2. **If Concept E is selected:** Define stub bracket geometry alongside the wing root attach fitting design — these are coupled and must be resolved together before pod construction begins. Confirm gear load transfer path into the pod side frame.
 
-3. **If Concept A is selected:** Design belly attach hard points with provisions for future conversion to Concept C — same fitting locations, same structural frame. Phase 2 adds the pivot fitting and fairing over the same hard point.
+3. **If Concept A is selected:** Design belly attach hard points with provisions for future conversion to Concept C — same structural frame, Phase 2 adds the pivot fitting and fairing.
 
-### Phase 2: Concept C (Belly Pivot, Trailing-Link)
+### Phase 2: Concept C (Belly Pivot, Trailing-Link) — if Concept E proves inadequate
 
-Concept C (3.35) is the Phase 2 target regardless of Phase 1 selection. It achieves meaningful drag reduction (~60% of fixed gear penalty), maintains mechanism simplicity, and avoids the pod pressure boundary complexity of Concept B. The trailing-link sub-assembly resolves the stroke concern and has strong kit-aircraft precedent.
+If Concept E's stowed geometry creates unacceptable drag or integration problems found in flight test, Concept C (3.35) is the fallback retract path. It achieves similar drag reduction via a belly-pivot approach with a trailing-link to resolve the stroke constraint.
 
-Phase 2 key development items:
+Phase 2 Concept C key development items:
 - Trailing-link geometry sizing against 6–10 ft/s sink rate at MTOW
 - Belly fairing design and clearance validation (roll, crosswind, prop)
 - Actuator selection and fail-safe spring sizing
@@ -234,12 +273,13 @@ These items gate the concept selection decision. They are assigned to the docume
 
 | Item | Gate | Assigned Document |
 |---|---|---|
-| Tread width calculation for Concept D side-pivot | Concept D vs. Concept A decision | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
+| Tread width calculation for Concept E stub bracket | Concept E vs. Concept A decision | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
 | Static tip-over angle at MTOW, CG range | Same gate | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
+| Stub bracket geometry co-design with wing root attach fitting | Concept E design entry; coupled — must be resolved together | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
+| Pod side frame load compatibility at wing root junction | Concept E structural entry | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
 | Trailing-link stroke sizing for 6–10 ft/s sink rate | Concept C Phase 2 design entry | `GEAR_STROKE_AND_ENERGY_ABSORPTION_REQUIREMENTS.md` |
 | Belly hard-point geometry vs. battery floor frame | Concept C integration | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
-| Actuator type selection and fail-safe logic | Concept C/D actuation | `GEAR_FAILSAFE_AND_ACTUATION_LOGIC.md` |
-| Pod side hard-point load compatibility (Concept D) | Concept D structural entry | `GEAR_CLEARANCE_AND_INTEGRATION_CONSTRAINTS.md` |
+| Actuator type selection and fail-safe logic | Concept C/E actuation | `GEAR_FAILSAFE_AND_ACTUATION_LOGIC.md` |
 
 ---
 
